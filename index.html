@@ -10,6 +10,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+     <script type="module">
+    import Chatbot from 
+    "https://cdn.jsdelivr.net/gh/infinichat/ene/web.js";
+    Chatbot.init({
+      theme: {
+        button: {
+          backgroundColor: "#3F3933", // #3F3933
+          right: 20,
+          bottom: 20,
+          size: "large",
+        },
+        chatWindow: {
+          title: " Online",
+          welcomeMessage: "Welcome to our store!\nHow can I help you? \nOur socials: <a style='color: rgba(59,130,246,.5); text-decoration: none;' href='https://www.instagram.com/gvscosmetics.ukraine/' onmouseover='this.style.color=\"lightgrey\"' onmouseout='this.style.color=\"grey\"'>Instagram</a>, <a style='color: rgba(59,130,246,.5); text-decoration: none;' href='https://www.facebook.com/gvscosmetics.ukraine/' onmouseover='this.style.color=\"lightgrey\"' onmouseout='this.style.color=\"grey\"'>Facebook</a>",
+          backgroundColor: "#ffffff",
+          height: 500, 
+          width: 400,
+          fontSize: 16,
+          poweredByTextColor: "#303235",
+          botMessage: {
+            backgroundColor: "#f7f8ff",
+            textColor: "#303235",   // #303235
+            showAvatar: true,
+            avatarSrc: "https://cdn.jsdelivr.net/gh/shibotgit/image@master/image1-16.jpg",
+          },
+          userMessage: {
+            backgroundColor: "#a38c76",
+            textColor: "#ffffff",
+            showAvatar: false,
+            avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+          },
+          textInput: {
+            placeholder: "Write message",
+            backgroundColor: "#ffffff",
+            textColor: "#303235",
+            sendButtonColor: "#a38c76", // #a38c76
+          },
+        },
+      },
+    });
+  </script>
     <!-- Navigation -->
     <header class="row container">
       <a href="#" class="logo row">
@@ -42,14 +83,7 @@
 <!-- chat_inputs: Stringified JSON with all the input keys and its values. The value of the key that is defined
 as chat_input_field will be overwritten by the chat message.
 chat_input_field: Input key that you want the chat to send the user message with. -->
-      <langflow-chat
-        window_title="Chatbot"
-        flow_id="fc38f410-dfa7-4398-95cf-ab8f56ef50e9"
-        chat_inputs='{"user_input":""}'
-        chat_input_field="user_input"
-        host_url="https://langflow-railway-production-8b24.up.railway.app/"
-        style="position: absolute; bottom: 50px; right: 50px"
-      ></langflow-chat>
+    
     </section>
     </section>
     <!-- Features -->
